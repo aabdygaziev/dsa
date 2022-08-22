@@ -38,19 +38,20 @@ function findNum(arr, queries) {
   
   for (let i = 0; i < queries.length; i++) {
 
-    let left = -1; // arr[left] <= target num
-    let right = arr.length; // arr[right] > target num
+    let left = -1; // arr[left] < target num
+    let right = arr.length; // arr[right] >= target num
     let num = queries[i];
     while ((left + 1) < right) {
       let mid = Math.floor((left + right) / 2);
 
-      if (arr[mid] <= num) {
+      if (arr[mid] < num) { 
         left = mid;
       } else {
         right = mid;
       }
     }
-    console.log(left + 1);
+    console.log(right + 1);
   }
+    
   return 0;
 }

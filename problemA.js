@@ -24,13 +24,9 @@ function readLine() {
 // ********** Code Start **********
 
 function main() {
-  let a = readLine();
-  let inputs = readLine();
-  let queries = readLine();
-
-  inputs = inputs.split(' ').map(num => parseInt(num));
-  queries = queries.split(' ').map(num => parseInt(num));
   
+  let inputs = inputString[1].split(' ').map(num => parseInt(num));
+  let queries = inputString[2].split(' ').map(num => parseInt(num));
   findNum(inputs, queries);
 }
 
