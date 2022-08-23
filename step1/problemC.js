@@ -20,7 +20,6 @@ process.stdin.on('end', _ => {
 function readLine() {
     return inputString[currentLine++];
 }
-
 // ********** Code Start **********
 function main() {
   let inputs = inputString[1].split(' ').map(num => parseInt(num));
